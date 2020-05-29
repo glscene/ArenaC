@@ -1,5 +1,5 @@
 * linguist-vendored
-*.cbproj linguist-vendored=false
+*.cpp linguist-vendored=false
 *.h linguist-language=C++
 *.cpp linguist-language=C++
-generated/*.pas linguist-generated=true
+generated/*.cbproj linguist-generated=true
