@@ -118,14 +118,11 @@ __published:	// IDE-managed Components
 	void __fastcall miHappyNewYearClick(TObject *Sender);
 	void __fastcall FormMouseWheel(TObject *Sender, TShiftState Shift, int WheelDelta,
           TPoint &MousePos, bool &Handled);
-
-
 private:	// User declarations
 	int mx, my;
 	float fireLight;
 	bool inPreview, inSaver;
 	Cardinal bStream;
-
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
 };
