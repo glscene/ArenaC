@@ -1,52 +1,19 @@
-# Prerequisites
-*.d
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Folder config file
+Desktop.ini
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Windows shortcuts
+*.lnk
