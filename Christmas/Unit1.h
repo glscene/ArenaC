@@ -1,4 +1,5 @@
 //---------------------------------------------------------------------------
+
 #ifndef Unit1H
 #define Unit1H
 //---------------------------------------------------------------------------
@@ -10,33 +11,34 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Menus.hpp>
 
-#include "GLBaseClasses.hpp"
-#include "GLBitmapFont.hpp"
-#include "GLCadencer.hpp"
-#include "GLCoordinates.hpp"
-#include "GLCrossPlatform.hpp"
-#include "GLGeomObjects.hpp"
-#include "GLHUDObjects.hpp"
-#include "GLLensFlare.hpp"
-#include "GLMaterial.hpp"
-#include "GLObjects.hpp"
-#include "GLParticleFX.hpp"
-#include "GLScene.hpp"
-#include "GLShadowPlane.hpp"
-#include "GLSound.hpp"
-#include "GLVectorFileObjects.hpp"
-#include "GLWin32Viewer.hpp"
-#include "GLWindowsFont.hpp"
-#include "GLScreenSaver.hpp"
-#include "GLSMBASS.hpp"
-#include "GLFileWAV.hpp"
-#include "Jpeg.hpp"
-#include "Bass.hpp"
-#include "GLFileMP3.hpp"
-#include "GLThorFX.hpp"
-#include "GLFireFX.hpp"
+#include "GLS.BitmapFont.hpp"
+#include "GLS.Cadencer.hpp"
+#include "GLS.Coordinates.hpp"
 
-//---------------------------------------------------------------------------
+#include "GLS.GeomObjects.hpp"
+#include "GLS.HUDObjects.hpp"
+#include "GLS.LensFlare.hpp"
+#include "GLS.Material.hpp"
+#include "GLS.Objects.hpp"
+#include "GLS.ParticleFX.hpp"
+#include "GLS.Scene.hpp"
+#include "GLS.ShadowPlane.hpp"
+#include "GLS.Sound.hpp"
+#include "GLS.VectorFileObjects.hpp"
+#include "GLS.SceneViewer.hpp"
+#include "GLS.WindowsFont.hpp"
+#include "GLS.ScreenSaver.hpp"
+#include "GLSM.BASS.hpp"
+#include "GLS.FileWAV.hpp"
+#include "Jpeg.hpp"
+#include "Import.Bass.hpp"
+#include "GLS.FileMP3.hpp"
+#include "GLS.ThorFX.hpp"
+#include "GLS.FireFX.hpp"
+#include "GLS.BaseClasses.hpp"
+
+//-----------------
+
 class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
@@ -118,11 +120,14 @@ __published:	// IDE-managed Components
 	void __fastcall miHappyNewYearClick(TObject *Sender);
 	void __fastcall FormMouseWheel(TObject *Sender, TShiftState Shift, int WheelDelta,
           TPoint &MousePos, bool &Handled);
+
+
 private:	// User declarations
 	int mx, my;
 	float fireLight;
 	bool inPreview, inSaver;
 	Cardinal bStream;
+
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
 };

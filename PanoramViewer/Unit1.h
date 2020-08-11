@@ -13,18 +13,18 @@
 #include <Forms.hpp>
 #include <Vcl.Imaging.jpeg.hpp>
 
-#include "GLCadencer.hpp"
-#include "GLObjects.hpp"
-#include "GLScene.hpp"
-#include "GLTexture.hpp"
-#include "GLWin32Viewer.hpp"
-#include "GLBaseClasses.hpp"
-#include "GLCoordinates.hpp"
-#include "GLMaterial.hpp"
-#include "GLCrossPlatform.hpp"
-#include "GLKeyBoard.hpp"
-#include "GLFileJPEG.hpp"
-#include "GLUtils.hpp"
+#include "GLS.Cadencer.hpp"
+#include "GLS.Objects.hpp"
+#include "GLS.Scene.hpp"
+#include "GLS.Texture.hpp"
+#include "GLS.SceneViewer.hpp"
+#include "GLS.BaseClasses.hpp"
+#include "GLS.Coordinates.hpp"
+#include "GLS.Material.hpp"
+ 
+#include "GLS.KeyBoard.hpp"
+#include "GLS.FileJPEG.hpp"
+#include "GLS.Utils.hpp"
 
 //---------------------------------------------------------------------------
 class TForm1 : public TForm

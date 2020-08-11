@@ -135,7 +135,6 @@ object Form1: TForm1
     Buffer.BackgroundColor = clSkyBlue
     Buffer.ContextOptions = [roDoubleBuffer, roStencilBuffer, roRenderToWindow]
     FieldOfView = 51.398372650146480000
-    PenAsTouch = False
     Align = alClient
     OnMouseDown = GLSceneViewer1MouseDown
     OnMouseMove = GLSceneViewer1MouseMove

@@ -33,6 +33,7 @@ object Form1: TForm1
     Buffer.ContextOptions = [roDoubleBuffer, roRenderToWindow]
     Buffer.AntiAliasing = aa2x
     FieldOfView = 158.902450561523400000
+    PenAsTouch = False
     Align = alClient
     PopupMenu = PopupMenu
     OnDblClick = ViewerDblClick

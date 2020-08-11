@@ -14,21 +14,21 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.Imaging.Jpeg.hpp>
 
-#include "GLScene.hpp"
-#include "GLObjects.hpp"
-#include "GLWin32Viewer.hpp"
-#include "GLCadencer.hpp"
-#include "GLVectorFileObjects.hpp"
-#include "GLShadowPlane.hpp"
+#include "GLS.Scene.hpp"
+#include "GLS.Objects.hpp"
+#include "GLS.SceneViewer.hpp"
+#include "GLS.Cadencer.hpp"
+#include "GLS.VectorFileObjects.hpp"
+#include "GLS.ShadowPlane.hpp"
 #include "GLVectorGeometry.hpp"
-#include "GLTexture.hpp"
+#include "GLS.Texture.hpp"
 #include "GLParticleFX.hpp"
-#include "GLMaterial.hpp"
-#include "GLCoordinates.hpp"
-#include "GLCrossPlatform.hpp"
-#include "GLBaseClasses.hpp"
+#include "GLS.Material.hpp"
+#include "GLS.Coordinates.hpp"
+ 
+#include "GLS.BaseClasses.hpp"
 
-#include "FileQ3MD3.hpp"
+#include "Q3MD3.hpp"
 
 
 //---------------------------------------------------------------------------

@@ -7,16 +7,16 @@
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "GLBaseClasses"
-#pragma link "GLCadencer"
-#pragma link "GLCoordinates"
-#pragma link "GLCrossPlatform"
-#pragma link "GLMaterial"
-#pragma link "GLObjects"
+#pragma link "GLS.Cadencer"
+#pragma link "GLS.Coordinates"
+ 
+#pragma link "GLS.Material"
+#pragma link "GLS.Objects"
 #pragma link "GLParticleFX"
-#pragma link "GLScene"
-#pragma link "GLShadowPlane"
-#pragma link "GLVectorFileObjects"
-#pragma link "GLWin32Viewer"
+#pragma link "GLS.Scene"
+#pragma link "GLS.ShadowPlane"
+#pragma link "GLS.VectorFileObjects"
+#pragma link "GLS.SceneViewer"
 #pragma link "GLFileMD3"
 
 #pragma resource "*.dfm"
@@ -99,7 +99,7 @@ void __fastcall TForm1::BuildModel() {
 	//
 	WeaponTags = new TMD3TagList;
 	WeaponTags->LoadFromFile("..\\model\\plasma.md3");
-	*GunSmoke->Matrix = WeaponTags->GetTransform("tag_flash", 0);
+	GunSmoke->Matrix = WeaponTags->GetTransform("tag_flash", 0);
 
 	// Apply textures to preloaded materials
 	// The md3 file loader puts a material into the actors
@@ -146,21 +146,21 @@ void __fastcall TForm1::GLCadencer1Progress(TObject *Sender,
 	// Set the transform for the torso
 	m1 = LegsTags->GetTransform("tag_torso", Legs->CurrentFrame);
 	m2 = LegsTags->GetTransform("tag_torso", Legs->NextFrameIndex());
-	*Torso->Matrix = InterpolateMatrix(m1, m2, Legs->CurrentFrameDelta);
+	Torso->Matrix = InterpolateMatrix(m1, m2, Legs->CurrentFrameDelta);
 	Torso->Roll(-TrackBar1->Position);
 	Torso->Turn(-TrackBar2->Position);
 
 	// Set the transform for the head
 	m1 = TorsoTags->GetTransform("tag_head", Torso->CurrentFrame);
 	m2 = TorsoTags->GetTransform("tag_head", Torso->NextFrameIndex());
-	*Head->Matrix = InterpolateMatrix(m1, m2, Torso->CurrentFrameDelta);
+	Head->Matrix = InterpolateMatrix(m1, m2, Torso->CurrentFrameDelta);
 	Head->Roll(-TrackBar3->Position);
 	Head->Turn(-TrackBar4->Position);
 
 	// Set the transform for the weapon
 	m1 = TorsoTags->GetTransform("tag_weapon", Torso->CurrentFrame);
 	m2 = TorsoTags->GetTransform("tag_weapon", Torso->NextFrameIndex());
-	*Weapon->Matrix = InterpolateMatrix(m1, m2, Torso->CurrentFrameDelta);
+	Weapon->Matrix = InterpolateMatrix(m1, m2, Torso->CurrentFrameDelta);
 
 	GLSceneViewer1->Invalidate();
 }
@@ -184,7 +184,7 @@ void __fastcall TForm1::GLSceneViewer1MouseMove(TObject *Sender,
 
 // ---------------------------------------------------------------------------
 void __fastcall TForm1::Timer1Timer(TObject *Sender) {
-	Caption = "GLScene Quake Actor " + Format("%.1f FPS",
+	Caption = "Quake Actor " + Format("%.1f FPS",
 		ARRAYOFCONST((GLSceneViewer1->FramesPerSecond())));
 	GLSceneViewer1->ResetPerformanceMonitor();
 }
