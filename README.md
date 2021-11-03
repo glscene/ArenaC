@@ -1,2 +1,2 @@
-# ExampleC
-Examples for using GLScene in C++Builder
+# ExamplesC
+The demos and examples of GLScene for C++Builder
