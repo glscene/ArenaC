@@ -1,2 +1,2 @@
-# ExamplesC
-The demos and examples of GLScene for C++Builder
+# SamplesC
+The source code samples for further development on C++Builder
