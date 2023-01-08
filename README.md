@@ -1,2 +1,2 @@
 # SamplesC
-The source code samples based on GLScene for C++Builder
+Samples of GLScene for C++Builder
