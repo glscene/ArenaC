@@ -1,2 +1,2 @@
 # SamplesGLS
-The source code samples based on GLScene compomemts and objects
+The source code samples based on GLScene components and objects
