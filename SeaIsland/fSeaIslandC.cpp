@@ -5,7 +5,7 @@
 
 #pragma hdrstop
 
-#include "fSeaIsland.h"
+#include "fSeaIslandC.h"
 // ---------------------------------------------------------------------------
 #pragma package(smart_init)
 

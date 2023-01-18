@@ -1,7 +1,7 @@
 //---------------------------------------------------------------------------
 
-#ifndef fSeaIslandH
-#define fSeaIslandH
+#ifndef fSeaIslandCH
+#define fSeaIslandCH
 
 #include <System.Classes.hpp>
 #include <Vcl.ComCtrls.hpp>
