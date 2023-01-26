@@ -1,2 +1,2 @@
 # SamplesGLS
-Samples for Delphi & C++Builder based on GLScene's objects and components
+Samples for C/C++ mainly based on GLScene's objects and components
