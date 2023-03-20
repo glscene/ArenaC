@@ -179,7 +179,7 @@ void __fastcall TFormBox::miProjectionsClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TFormBox::About1Click(TObject *Sender)
+void __fastcall TFormBox::miAboutClick(TObject *Sender)
 {
    TFormAbout *FormAbout;
    FormAbout = new TFormAbout(this);

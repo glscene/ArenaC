@@ -407,24 +407,24 @@ object FormBox: TFormBox
   object MainMenu: TMainMenu
     Left = 392
     Top = 24
-    object File1: TMenuItem
+    object miFile: TMenuItem
       Caption = '&File'
-      object New1: TMenuItem
+      object miNew: TMenuItem
         Caption = '&New'
       end
-      object Open1: TMenuItem
+      object miOpen: TMenuItem
         Caption = '&Open...'
       end
-      object Save1: TMenuItem
+      object miSave: TMenuItem
         Caption = '&Save'
       end
-      object SaveAs1: TMenuItem
+      object miSaveAs: TMenuItem
         Caption = 'Save &As...'
       end
       object N2: TMenuItem
         Caption = '-'
       end
-      object Exit1: TMenuItem
+      object miExit: TMenuItem
         Caption = 'E&xit'
       end
     end
@@ -445,17 +445,32 @@ object FormBox: TFormBox
         Caption = '&Color Scales...'
       end
     end
-    object Help1: TMenuItem
+    object miTools: TMenuItem
+      Caption = '&Tools'
+      object miSettings: TMenuItem
+        Caption = '&Settings...'
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object miHide: TMenuItem
+        Caption = '&Hide'
+      end
+      object miShow: TMenuItem
+        Caption = '&Show...'
+      end
+    end
+    object miHelp: TMenuItem
       Caption = '&Help'
-      object Content1: TMenuItem
+      object miContent: TMenuItem
         Caption = 'Content...'
       end
       object N3: TMenuItem
         Caption = '-'
       end
-      object About1: TMenuItem
+      object miAbout: TMenuItem
         Caption = '&About...'
-        OnClick = About1Click
+        OnClick = miAboutClick
       end
     end
   end

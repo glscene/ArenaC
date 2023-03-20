@@ -71,19 +71,24 @@ __published: // IDE-managed Components
 	TMenuItem *miProjections;
 	TMenuItem *Hide1;
 	TMenuItem *N1;
-	TMenuItem *File1;
-	TMenuItem *New1;
-	TMenuItem *Open1;
-	TMenuItem *Save1;
-	TMenuItem *SaveAs1;
-	TMenuItem *Exit1;
+	TMenuItem *miFile;
+	TMenuItem *miNew;
+	TMenuItem *miOpen;
+	TMenuItem *miSave;
+	TMenuItem *miSaveAs;
+	TMenuItem *miExit;
 	TMenuItem *N2;
-	TMenuItem *Help1;
-	TMenuItem *About1;
+	TMenuItem *miHelp;
+	TMenuItem *miAbout;
 	TPanel *PanelLeft;
 	TTreeView *TreeView;
-	TMenuItem *Content1;
+	TMenuItem *miContent;
 	TMenuItem *N3;
+	TMenuItem *miTools;
+	TMenuItem *miSettings;
+	TMenuItem *miHide;
+	TMenuItem *miShow;
+	TMenuItem *N4;
 
 	void __fastcall FormMouseWheel(TObject *Sender, TShiftState Shift,
 		int WheelDelta, TPoint &MousePos, bool &Handled);
@@ -98,7 +103,7 @@ __published: // IDE-managed Components
 	void __fastcall chbOClick(TObject *Sender);
 	void __fastcall miStarLifeClick(TObject *Sender);
 	void __fastcall miProjectionsClick(TObject *Sender);
-	void __fastcall About1Click(TObject *Sender);
+	void __fastcall miAboutClick(TObject *Sender);
 private: // User declarations
 	TGLPoints *Stars[1000];
 	void MakeStars(TObject *Sender);
