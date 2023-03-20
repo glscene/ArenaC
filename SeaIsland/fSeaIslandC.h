@@ -8,58 +8,35 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.ExtCtrls.hpp>
 #include <Vcl.StdCtrls.hpp>
-#include "GLS.BaseClasses.hpp"
-#include "GLS.BitmapFont.hpp"
-#include "GLS.Cadencer.hpp"
-#include "GLS.Coordinates.hpp"
-#include "GLS.HeightData.hpp"
-#include "GLS.HeightTileFileHDS.hpp"
-#include "GLS.HUDObjects.hpp"
-#include "GLS.Material.hpp"
-#include "GLS.Objects.hpp"
-#include "GLS.Scene.hpp"
-#include "GLS.SceneViewer.hpp"
-#include "GLS.SkyDome.hpp"
-#include "GLS.TerrainRenderer.hpp"
-#include "GLS.VectorFileObjects.hpp"
-#include "GLS.WindowsFont.hpp"
-#include "GLS.ProxyObjects.hpp"
-#include "GLS.MultiProxy.hpp"
-#include <Vcl.Buttons.hpp>
-#include <gl\gl.h>
-#include <System.Classes.hpp>
-#include <Vcl.ComCtrls.hpp>
-#include <Vcl.Controls.hpp>
-#include <Vcl.ExtCtrls.hpp>
-#include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
 #include <Vcl.Imaging.jpeg.hpp>
-
-#include "GLS.Material.hpp"
+#include <Vcl.Buttons.hpp>
+//---------------------------------------------------------------------------
+#include "GLS.BaseClasses.hpp"
+#include "GLS.Scene.hpp"
 #include "GLS.BitmapFont.hpp"
 #include "GLS.Cadencer.hpp"
 #include "GLS.Coordinates.hpp"
 #include "GLS.HeightData.hpp"
 #include "GLS.HeightTileFileHDS.hpp"
 #include "GLS.HUDObjects.hpp"
-
+#include "GLS.Material.hpp"
 #include "GLS.Objects.hpp"
-#include "GLS.Scene.hpp"
 #include "GLS.SceneViewer.hpp"
 #include "GLS.SkyDome.hpp"
 #include "GLS.TerrainRenderer.hpp"
-#include "GLS.VectorFileObjects.hpp"
-#include "GLS.WindowsFont.hpp"
 
-//---------------------------------------------------------------------------
+#include "GLS.VectorTypes.hpp"
+#include "GLS.VectorLists.hpp"
+#include "GLS.VectorGeometry.hpp"
+#include "GLS.VectorFileObjects.hpp"
+
+#include "GLS.WindowsFont.hpp"
+//#include "GLS.ProxyObjects.hpp"
+//#include "GLS.MultiProxy.hpp"
 
 #include "GLS.RoamPatch.hpp"
 #include "GLS.RenderContextInfo.hpp"
-#include "GLS.VectorFileObjects.hpp"
-#include "GLS.BaseClasses.hpp"
-#include "GLS.VectorLists.hpp"
-#include "GLS.VectorTypes.hpp"
-#include "GLS.VectorGeometry.hpp"
 
 #include "GLS.Keyboard.hpp"
 #include "GLS.Context.hpp"
@@ -95,9 +72,13 @@ __published:	// IDE-managed Components
 	TGLActor *GLWolf;
 	TGLFreeForm *GLHouse;
 	TGLFreeForm *GLTree;
-	TGLDummyCube *GLDummyTrees;
+	TGLDummyCube *dcTrees;
 	TGLActor *GLShark1;
 	TGLActor *GLShark2;
+	TGLFreeForm *Eagle;
+	TGLDummyCube *dcFishes;
+	TGLDummyCube *dcBirds;
+	TGLFreeForm *Stork;
 	void __fastcall GLCadencerProgress(TObject *Sender, const double deltaTime, const double newTime);
 	void __fastcall FormKeyPress(TObject *Sender, System::WideChar &Key);
 	void __fastcall GLCustomHDS1MarkDirtyEvent(const TRect &area);

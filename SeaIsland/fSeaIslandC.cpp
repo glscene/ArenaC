@@ -30,8 +30,9 @@
 #pragma link "GLS.FileSMD"
 #pragma link "GLS.FileMD2"
 
-#pragma link "GLS.ProxyObjects"
-#pragma link "GLS.MultiProxy"
+//#pragma link "GLS.ProxyObjects"
+//#pragma link "GLS.MultiProxy"
+
 #pragma resource "*.dfm"
 TForm1* Form1;
 
@@ -56,7 +57,7 @@ void __fastcall TForm1::FormCreate(TObject* Sender)
 	String DataPath;
 
 	DataPath = ExtractFilePath(Application->ExeName);
-	DataPath += "Data\\";
+	DataPath += "data\\";
 	SetCurrentDir(DataPath);
 	MaterialLibrary->TexturePaths = DataPath;
 
@@ -66,54 +67,51 @@ void __fastcall TForm1::FormCreate(TObject* Sender)
 	for (i = 0; i <= 3; i++)
 		for (j = 0; j <= 3; j++) {
 			name = Format("Tex_%d_%d.bmp", ARRAYOFCONST((i, j)));
-			if (!FileExists(name)) {
-				ShowMessage("Texture file " + name +
-							" not found...\r\
-					  Did you run "
-                            "splitter->exe"
-                            " as said in the readme->txt?");
-                Application->Terminate();
-                Abort();
-            }
-            libMat = MaterialLibrary->AddTextureMaterial(name, name, false);
-            libMat->Material->Texture->TextureMode = tmReplace;
-            libMat->Material->Texture->TextureWrap = twNone;
-            libMat->Material->Texture->Compression = tcStandard;
-            libMat->Material->Texture->FilteringQuality = tfAnisotropic;
+			libMat = MaterialLibrary->AddTextureMaterial(name, name, false);
+			libMat->Material->Texture->TextureMode = tmReplace;
+			libMat->Material->Texture->TextureWrap = twNone;
+			libMat->Material->Texture->Compression = tcStandard;
+			libMat->Material->Texture->FilteringQuality = tfAnisotropic;
 
-            libMat->Texture2Name = "detail";
-        }
+			libMat->Texture2Name = "detail";
+		}
 
-    CamHeight = 30;
-    WaterPlane = true;
+	CamHeight = 30;
+	WaterPlane = true;
 
-    FFSailBoat->LoadFromFile("boat.3ds");
-    FFSailBoat->TurnAngle = -30;
+	FFSailBoat->LoadFromFile("boat.3ds");
+	FFSailBoat->TurnAngle = -30;
 
-    GLHouse->LoadFromFile("house.obj");
-    GLHouse->Material->Texture->Image->LoadFromFile("house.jpg");
+	GLHouse->LoadFromFile("house.obj");
+	GLHouse->Material->Texture->Image->LoadFromFile("house.jpg");
 
-    GLTree->LoadFromFile("tree.obj");
-    GLTree->Material->Texture->Image->LoadFromFile("tree.png");
+	GLTree->LoadFromFile("tree.obj");
+	GLTree->Material->Texture->Image->LoadFromFile("tree.png");
 
-    addTree();
+	addTree();
 
-    GLWolf->LoadFromFile("wolf.md2");
-    GLWolf->Material->Texture->Image->LoadFromFile("wolf_texture.png");
+	GLWolf->LoadFromFile("wolf.md2");
+	GLWolf->Material->Texture->Image->LoadFromFile("wolf_texture.png");
 
-    GLShark1->LoadFromFile("shark.obj");
-    GLShark1->Material->Texture->Image->LoadFromFile("shark_texture.png");
+	GLShark1->LoadFromFile("shark.obj");
+	GLShark1->Material->Texture->Image->LoadFromFile("shark_texture.png");
 
-    GLShark2->LoadFromFile("shark.obj");
-    GLShark2->Material->Texture->Image = GLShark1->Material->Texture->Image;
+	GLShark2->LoadFromFile("shark.obj");
+	GLShark2->Material->Texture->Image = GLShark1->Material->Texture->Image;
 
-    for (i = 0; i < MLSailBoat->Materials->Count; i++)
-        MLSailBoat->Materials->Items[i]
-            ->Material->FrontProperties->Ambient->Color =
-            MLSailBoat->Materials->Items[i]
-                ->Material->FrontProperties->Diffuse->Color;
+	Eagle->LoadFromFile("eagle.obj");
+	//Eagle->Material->Texture->Image->LoadFromFile("stork.jpg");
 
-    HTHelp->Text = "Help:\r\
+	Stork->LoadFromFile("stork.3ds");
+//	Stork->Material->Texture->Image->LoadFromFile("VMtl1.jpg");
+
+	for (i = 0; i < MLSailBoat->Materials->Count; i++)
+		MLSailBoat->Materials->Items[i]
+			->Material->FrontProperties->Ambient->Color =
+			MLSailBoat->Materials->Items[i]
+				->Material->FrontProperties->Diffuse->Color;
+
+	HTHelp->Text = "Help:\r\
 			  WASD : Camera control\r\
 			  V : Hide/show sea surface\r\
 			  P : Hide/show wireframe\r\
@@ -122,70 +120,69 @@ void __fastcall TForm1::FormCreate(TObject* Sender)
 			  * : Increase CLOD precision\r\
 			  / : decrease CLOD precision\r\
 			  F1: Show this message";
-    HTHelp->Position->SetPoint(
-        Screen->Width / 2 - 100, Screen->Height / 2 - 150, 0);
-    HelpOpacity = 4;
-    GLSceneViewer->Cursor = crNone;
+	HTHelp->Position->SetPoint(
+		Screen->Width / 2 - 100, Screen->Height / 2 - 150, 0);
+	HelpOpacity = 4;
+	GLSceneViewer->Cursor = crNone;
 }
 
 void __fastcall TForm1::addTree()
 {
-    TGLFreeForm* tree;
-    TGLVector s;
-    float f;
-    int x[16] = { -230, -300, -400, -430, -437, -444, -460, -482, -350, -270,
-        -500, -285, -600, -620, -635, -642 };
-    int z[16] = { 290, 290, 320, 370, 340, 360, 310, 290, 270, 180, 360, 370,
-        290, 260, 275, 185 };
+	TGLFreeForm* tree;
+	TGLVector s;
+	float f;
+	int x[16] = { -230, -300, -400, -430, -437, -444, -460, -482, -350, -270,
+		-500, -285, -600, -620, -635, -642 };
+	int z[16] = { 290, 290, 320, 370, 340, 360, 310, 290, 270, 180, 360, 370,
+		290, 260, 275, 185 };
 
-    for (int i = 0; i < 16; i++) {
-        tree =
-            (TGLFreeForm*)(GLDummyTrees->AddNewChild(__classid(TGLFreeForm)));
+	for (int i = 0; i < 16; i++) {
+		tree = (TGLFreeForm*)(dcTrees->AddNewChild(__classid(TGLFreeForm)));
 
-        tree->LoadFromFile("tree.obj");
-        tree->Material->Texture->Disabled = False;
-        tree->Material->Texture->Image->LoadFromFile("tree.png");
-        s = GLTree->Scale->AsVector;
-        f = (Random() + 0.3);
-        ScaleVector(s, 1.9 * f);
-        tree->Scale->AsVector = s;
-        tree->Position->X = x[i];
-        switch (i) {
-            case 8: {
-                tree->Position->Y = -23;
-                break;
-            }
-            case 9: {
-                tree->Position->Y = -35;
-                break;
-            }
-            case 11: {
-                tree->Position->Y = 5;
-                break;
-            }
-            case 15: {
-                tree->Position->Y = -35;
-                break;
-            }
-            default: {
-                tree->Position->Y = -17;
-                break;
-            }
-        }
-        tree->Position->Z = z[i];
-    }
+		tree->LoadFromFile("tree.obj");
+		tree->Material->Texture->Disabled = False;
+		tree->Material->Texture->Image->LoadFromFile("tree.png");
+		s = GLTree->Scale->AsVector;
+		f = (Random() + 0.3);
+		ScaleVector(s, 1.9 * f);
+		tree->Scale->AsVector = s;
+		tree->Position->X = x[i];
+		switch (i) {
+			case 8: {
+				tree->Position->Y = -23;
+				break;
+			}
+			case 9: {
+				tree->Position->Y = -35;
+				break;
+			}
+			case 11: {
+				tree->Position->Y = 5;
+				break;
+			}
+			case 15: {
+				tree->Position->Y = -35;
+				break;
+			}
+			default: {
+				tree->Position->Y = -17;
+				break;
+			}
+		}
+		tree->Position->Z = z[i];
+	}
 }
 
 // ---------------------------------------------------------------------------
 void TForm1::ResetMousePos(void)
 {
-    if (GLSceneViewer->Cursor == crNone)
-        SetCursorPos(Screen->Width / 2, Screen->Height / 2);
+	if (GLSceneViewer->Cursor == crNone)
+		SetCursorPos(Screen->Width / 2, Screen->Height / 2);
 }
 
 // ---------------------------------------------------------------------------
 void __fastcall TForm1::GLCadencerProgress(
-    TObject* Sender, const double deltaTime, const double newTime)
+	TObject* Sender, const double deltaTime, const double newTime)
 {
     float Speed, Alpha, f;
     float TerrainHeight, SurfaceHeight;
@@ -236,11 +233,11 @@ void __fastcall TForm1::GLCadencerProgress(
     } else if (thirdPos == true) {
         GLWolf->Position->X += WolfSpeed;
         GLWolf->Position->Z -= WolfSpeed;
-        if (GLWolf->Position->X == -300) {
+		if (GLWolf->Position->X == -300) {
             GLWolf->RollAngle = 180;
             thirdPos = false;
-        }
-    } else {
+		}
+	} else {
         GLWolf->Position->X += WolfSpeed;
         if (GLWolf->Position->X == -240) {
             GLWolf->RollAngle = 0;
@@ -525,7 +522,7 @@ void __fastcall TForm1::TerrainRendererHeightDataPostRender(
         MaterialLibrary->ApplyMaterial("water", rci);
         do {
             if (!WasAboveWater)
-                rci.GLStates->InvertGLFrontFace();
+                rci.GLStates->InvertFrontFace();
             glPushAttrib(GL_ENABLE_BIT);
 
             glDisable(GL_LIGHTING);
@@ -565,7 +562,7 @@ void __fastcall TForm1::TerrainRendererHeightDataPostRender(
             glStencilOp(GL_KEEP, GL_KEEP, GL_KEEP);
             glPopAttrib();
             if (!WasAboveWater)
-                rci.GLStates->InvertGLFrontFace();
+                rci.GLStates->InvertFrontFace();
             WaterPolyCount = HeightDatas->Count * 8;
         } while (MaterialLibrary->UnApplyMaterial(rci));
     }
@@ -643,7 +640,7 @@ void __fastcall TForm1::DOWakeRender(TObject* Sender, TGLRenderContextInfo &rci)
             glDisable(GL_DEPTH_TEST);
 
             if (!WasAboveWater)
-                rci.GLStates->InvertGLFrontFace();
+                rci.GLStates->InvertFrontFace();
 
             glBegin(GL_TRIANGLE_STRIP);
             n = WakeVertices->Count;
@@ -661,7 +658,7 @@ void __fastcall TForm1::DOWakeRender(TObject* Sender, TGLRenderContextInfo &rci)
             glEnd();
 
             if (!WasAboveWater)
-                rci.GLStates->InvertGLFrontFace();
+                rci.GLStates->InvertFrontFace();
 
             glPopAttrib();
             glDisable(stStencilTest);

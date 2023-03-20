@@ -6,7 +6,7 @@
         <Projects Include="SeaIsland\SeaIslandC.cbproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="SoundScene\SoundSceneD.dproj">
+        <Projects Include="Molecule\MoleculeC.cbproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -26,23 +26,23 @@
     <Target Name="SeaIslandC:Make">
         <MSBuild Projects="SeaIsland\SeaIslandC.cbproj" Targets="Make"/>
     </Target>
-    <Target Name="SoundSceneD">
-        <MSBuild Projects="SoundScene\SoundSceneD.dproj"/>
+    <Target Name="MoleculeC">
+        <MSBuild Projects="Molecule\MoleculeC.cbproj"/>
     </Target>
-    <Target Name="SoundSceneD:Clean">
-        <MSBuild Projects="SoundScene\SoundSceneD.dproj" Targets="Clean"/>
+    <Target Name="MoleculeC:Clean">
+        <MSBuild Projects="Molecule\MoleculeC.cbproj" Targets="Clean"/>
     </Target>
-    <Target Name="SoundSceneD:Make">
-        <MSBuild Projects="SoundScene\SoundSceneD.dproj" Targets="Make"/>
+    <Target Name="MoleculeC:Make">
+        <MSBuild Projects="Molecule\MoleculeC.cbproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="SeaIslandC;SoundSceneD"/>
+        <CallTarget Targets="SeaIslandC;MoleculeC"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="SeaIslandC:Clean;SoundSceneD:Clean"/>
+        <CallTarget Targets="SeaIslandC:Clean;MoleculeC:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="SeaIslandC:Make;SoundSceneD:Make"/>
+        <CallTarget Targets="SeaIslandC:Make;MoleculeC:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
