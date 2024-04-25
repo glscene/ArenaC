@@ -25,12 +25,18 @@
 #include "fProjections.h"
 #include "fStarLife.h"
 #include "fAbout.h"
+#include <System.ImageList.hpp>
+#include <Vcl.BaseImageCollection.hpp>
+#include <Vcl.ImageCollection.hpp>
+#include <Vcl.ImgList.hpp>
+#include <Vcl.VirtualImageList.hpp>
+#include <Vcl.NumberBox.hpp>
 
 // ---------------------------------------------------------------------------
 class TFormBox : public TForm {
 __published: // IDE-managed Components
 	TGLScene *GLScene;
-	TGLSceneViewer *GLSceneViewer1;
+	TGLSceneViewer *GLSceneViewer;
 	TGLLightSource *LightSource;
 	TGLCamera *Camera;
 	TGLDummyCube *dcStarbox;
@@ -41,10 +47,6 @@ __published: // IDE-managed Components
 	TGLCadencer *GLCadencer;
 	TGLMaterialLibrary *MatLibColors;
 	TGroupBox *gbStars;
-	TPanel *Panel2;
-	TPanel *Panel3;
-	TPanel *Panel4;
-	TPanel *Panel5;
 	TCheckBox *chbO;
 	TCheckBox *chbB;
 	TCheckBox *chbA;
@@ -53,10 +55,6 @@ __published: // IDE-managed Components
 	TCheckBox *chbK;
 	TCheckBox *chbM;
 	TSpinEdit *SpinEdit;
-	TPanel *Panel6;
-	TPanel *Panel7;
-	TPanel *Panel8;
-	TRadioGroup *rgStyle;
 	TCheckBox *chbAll;
 	TShape *shO;
 	TShape *shB;
@@ -89,11 +87,32 @@ __published: // IDE-managed Components
 	TMenuItem *miHide;
 	TMenuItem *miShow;
 	TMenuItem *N4;
+	TCheckBox *chbSmoothStars;
+	TVirtualImageList *VirtualImageList;
+	TImageCollection *ImageCollection;
+	TCheckBox *chbOnClasses;
+	TButton *ButtonClear;
+	TNumberBox *nbO;
+	TNumberBox *nbB;
+	TNumberBox *nbA;
+	TNumberBox *nbF;
+	TNumberBox *nbG;
+	TNumberBox *nbK;
+	TNumberBox *nbM;
+	TNumberBox *nbAn;
+	TNumberBox *nbMn;
+	TNumberBox *nbKn;
+	TNumberBox *nbGn;
+	TNumberBox *nbFn;
+	TNumberBox *nbBn;
+	TNumberBox *nbOn;
+	TLabel *Label1;
+	TLabel *Label2;
 
 	void __fastcall FormMouseWheel(TObject *Sender, TShiftState Shift,
 		int WheelDelta, TPoint &MousePos, bool &Handled);
 	void __fastcall ButtonStarsClick(TObject *Sender);
-	void __fastcall GLSceneViewer1MouseDown(TObject *Sender,
+	void __fastcall GLSceneViewerMouseDown(TObject *Sender,
 		TMouseButton Button, TShiftState Shift, int X, int Y);
 	void __fastcall GLSceneViewer1MouseMove(TObject *Sender, TShiftState Shift,
 		int X, int Y);
@@ -104,8 +123,10 @@ __published: // IDE-managed Components
 	void __fastcall miStarLifeClick(TObject *Sender);
 	void __fastcall miProjectionsClick(TObject *Sender);
 	void __fastcall miAboutClick(TObject *Sender);
+	void __fastcall ButtonClearClick(TObject *Sender);
+	void __fastcall SpinEditChange(TObject *Sender);
 private: // User declarations
-	TGLPoints *Stars[1000];
+	TGLPoints *Stars[10000];
 	void MakeStars(TObject *Sender);
 
 	int mx, my;

@@ -18,6 +18,7 @@
 #include "GLS.SceneViewer.hpp"
 #include "GLS.SimpleNavigation.hpp"
 #include "GLS.Keyboard.hpp"
+#include "GLS.GeomObjects.hpp"
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -25,25 +26,25 @@ __published:	// IDE-managed Components
 	TGLPerlinPFXManager *PerlinManager;
 	TGLCadencer *Cadencer;
 	TGLScene *Scene;
-	TGLDummyCube *GLDCubeHent;
-	TGLSphere *Hent;
-	TGLSphere *GLSphere2;
-	TGLSphere *GLSphere3;
-	TGLSphere *GLSphere4;
-	TGLSphere *GLSphere5;
-	TGLSphere *GLSphere6;
-	TGLSphere *GLSphere7;
+	TGLDummyCube *dcCl;
+	TGLSphere *Sphere;
+	TGLSphere *clBottom1;
+	TGLSphere *clMiddle1;
+	TGLSphere *clMiddle2;
+	TGLSphere *clMiddle3;
+	TGLSphere *clMiddle4;
+	TGLSphere *clTop1;
 	TGLSphere *GLSphere8;
-	TGLSphere *GLSphere9;
-	TGLDummyCube *GLDCubeProton5;
+	TGLSphere *clMiddle5;
+	TGLDummyCube *dcNa;
 	TGLSphere *GLSphere17;
 	TGLSphere *GLSphere18;
 	TGLDummyCube *GLDCubeProton4;
-	TGLSphere *GLSphere16;
+	TGLSphere *naTop1;
 	TGLSphere *GLSphere15;
 	TGLDummyCube *GLDCubeProton3;
 	TGLSphere *GLSphere14;
-	TGLSphere *GLSphere13;
+	TGLSphere *naBottom1;
 	TGLDummyCube *GLDCubeProton2;
 	TGLSphere *GLSphere12;
 	TGLSphere *GLSphere11;
@@ -56,6 +57,9 @@ __published:	// IDE-managed Components
 	TGLSceneViewer *GLSceneViewer1;
 	TGLCustomSpritePFXManager *SpriteManager;
 	TGLSimpleNavigation *SimpleNavigation;
+	TGLArrowLine *lineMiddle1;
+	TGLArrowLine *lineMiddle2;
+	TGLArrowLine *lineMiddle3;
 	void __fastcall FormKeyDown(TObject *Sender, WORD &Key, TShiftState Shift);
 	void __fastcall CadencerProgress(TObject *Sender, const double DeltaTime, const double NewTime);
 

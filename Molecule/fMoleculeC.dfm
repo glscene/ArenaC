@@ -1,29 +1,36 @@
 object Form1: TForm1
   Left = 211
   Top = 113
-  BorderStyle = bsNone
+  Margins.Left = 5
+  Margins.Top = 5
+  Margins.Right = 5
+  Margins.Bottom = 5
   Caption = 'Molecule'
-  ClientHeight = 518
-  ClientWidth = 814
+  ClientHeight = 695
+  ClientWidth = 1193
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -19
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   Position = poScreenCenter
-  WindowState = wsMaximized
   OnKeyDown = FormKeyDown
-  TextHeight = 13
+  PixelsPerInch = 168
+  TextHeight = 24
   object GLSceneViewer1: TGLSceneViewer
     Left = 0
     Top = 0
-    Width = 814
-    Height = 518
+    Width = 1193
+    Height = 695
     Cursor = crArrow
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Camera = GLCamera1
     Buffer.BackgroundColor = clBlack
-    FieldOfView = 158.146911621093800000
+    FieldOfView = 163.624389648437500000
     PenAsTouch = False
     Align = alClient
     DragCursor = crHourGlass
@@ -62,63 +69,106 @@ object Form1: TForm1
   object Cadencer: TGLCadencer
     Scene = Scene
     OnProgress = CadencerProgress
-    Left = 88
-    Top = 8
+    Left = 116
+    Top = 106
   end
   object Scene: TGLScene
-    Left = 24
+    Left = 122
     Top = 8
-    object GLDCubeHent: TGLDummyCube
-      CubeSize = 1.000000000000000000
-      object Hent: TGLSphere
+    object lineMiddle3: TGLArrowLine
+      Position.Coordinates = {000000C000000000000000000000803F}
+      BottomRadius = 0.100000001490116100
+      Height = 4.000000000000000000
+      TopRadius = 0.100000001490116100
+      TopArrowHeadHeight = 0.500000000000000000
+      TopArrowHeadRadius = 0.200000002980232200
+      BottomArrowHeadHeight = 0.500000000000000000
+      BottomArrowHeadRadius = 0.200000002980232200
+    end
+    object lineMiddle1: TGLArrowLine
+      BottomRadius = 0.100000001490116100
+      Height = 4.000000000000000000
+      TopRadius = 0.100000001490116100
+      TopArrowHeadHeight = 0.500000000000000000
+      TopArrowHeadRadius = 0.200000002980232200
+      BottomArrowHeadHeight = 0.500000000000000000
+      BottomArrowHeadRadius = 0.200000002980232200
+    end
+    object lineMiddle2: TGLArrowLine
+      Position.Coordinates = {0000004000000000000000000000803F}
+      BottomRadius = 0.100000001490116100
+      Height = 4.000000000000000000
+      TopRadius = 0.100000001490116100
+      TopArrowHeadHeight = 0.500000000000000000
+      TopArrowHeadRadius = 0.200000002980232200
+      BottomArrowHeadHeight = 0.500000000000000000
+      BottomArrowHeadRadius = 0.200000002980232200
+    end
+    object GLCamera1: TGLCamera
+      DepthOfView = 100.000000000000000000
+      FocalLength = 50.000000000000000000
+      TargetObject = Sphere
+      Position.Coordinates = {0000404000004040000040400000803F}
+      object GLLightSource1: TGLLightSource
+        ConstAttenuation = 1.000000000000000000
+        SpotCutOff = 180.000000000000000000
+      end
+    end
+    object dcCl: TGLDummyCube
+      CubeSize = 4.000000000000000000
+      VisibleAtRunTime = True
+      object Sphere: TGLSphere
         Material.FrontProperties.Ambient.Color = {EAE9693FBDBC3C3EE0DF5F3F0000803F}
         Scale.Coordinates = {00000040000000400000004000000000}
+        Visible = False
         Radius = 0.500000000000000000
       end
-      object GLSphere2: TGLSphere
+      object clTop1: TGLSphere
+        Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FB1B0B03D0000803F}
+        Position.Coordinates = {0000000000000040000000000000803F}
+        Radius = 0.500000000000000000
+      end
+      object clBottom1: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FA1A0A03D0000803F}
-        Position.Coordinates = {00000000000080BF000000000000803F}
+        Position.Coordinates = {00000000000000C0000000000000803F}
         Radius = 0.500000000000000000
       end
-      object GLSphere3: TGLSphere
+      object clMiddle1: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FF1F0F03D0000803F}
-        Position.Coordinates = {0000803F00000000000000000000803F}
+        Position.Coordinates = {0000004000000000000000000000803F}
         Radius = 0.500000000000000000
       end
-      object GLSphere4: TGLSphere
+      object clMiddle2: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FB1B0B03D0000803F}
-        Position.Coordinates = {000080BF00000000000000000000803F}
+        Position.Coordinates = {000000C000000000000000000000803F}
         Radius = 0.500000000000000000
       end
-      object GLSphere5: TGLSphere
+      object clMiddle3: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3F9190903D0000803F}
-        Position.Coordinates = {00000000000000000000803F0000803F}
+        Position.Coordinates = {0000000000000000000000400000803F}
         Radius = 0.500000000000000000
       end
-      object GLSphere6: TGLSphere
+      object clMiddle4: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FB1B0B03D0000803F}
-        Position.Coordinates = {0000000000000000000080BF0000803F}
+        Position.Coordinates = {0000000000000000000000C00000803F}
         Radius = 0.500000000000000000
       end
-      object GLSphere7: TGLSphere
-        Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FB1B0B03D0000803F}
-        Position.Coordinates = {000000000000803F000000000000803F}
+      object clMiddle5: TGLSphere
+        Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FA1A0A03D0000803F}
         Radius = 0.500000000000000000
       end
       object GLSphere8: TGLSphere
         Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3F8988083E0000803F}
-        Radius = 0.500000000000000000
-      end
-      object GLSphere9: TGLSphere
-        Material.FrontProperties.Diffuse.Color = {CDCC4C3FCDCC4C3FA1A0A03D0000803F}
+        Visible = False
         Radius = 0.500000000000000000
       end
     end
-    object GLDCubeProton5: TGLDummyCube
-      CubeSize = 1.000000000000000000
-      object GLSphere17: TGLSphere
-        Material.FrontProperties.Diffuse.Color = {C5C4443EFAF9793FCDCC4C3F0000803F}
-        Position.Coordinates = {00000000000000C0000000000000803F}
+    object dcNa: TGLDummyCube
+      CubeSize = 4.000000000000000000
+      object naTop1: TGLSphere
+        Material.FrontProperties.Diffuse.Color = {CDCC4C3F8B8A0A3FCDCC4C3F0000803F}
+        Material.FrontProperties.Specular.Color = {C7C6C63E00000000000000000000803F}
+        Position.Coordinates = {00000000000000000000C0C00000803F}
         Radius = 0.500000000000000000
         EffectsData = {
           0458434F4C02010202061254474C536F75726365504658456666656374020202
@@ -130,9 +180,10 @@ object Form1: TForm1
           00000500000000000000000000050000000000CDCCCCFB3F0200020009050000
           0000000000000000080200}
       end
-      object GLSphere18: TGLSphere
-        Material.FrontProperties.Diffuse.Color = {F5F4743E0000803FCDCC4C3F0000803F}
-        Position.Coordinates = {0000000000000040000000000000803F}
+      object naBottom1: TGLSphere
+        Material.FrontProperties.Emission.Color = {9190103E00000000E0DF5F3F0000803F}
+        Material.FrontProperties.Specular.Color = {000000008281013FD5D4543F0000803F}
+        Position.Coordinates = {000000000000A0C0000000000000803F}
         Radius = 0.500000000000000000
         EffectsData = {
           0458434F4C02010202061254474C536F75726365504658456666656374020202
@@ -146,11 +197,24 @@ object Form1: TForm1
       end
     end
     object GLDCubeProton4: TGLDummyCube
-      CubeSize = 1.000000000000000000
-      object GLSphere16: TGLSphere
-        Material.FrontProperties.Diffuse.Color = {CDCC4C3F8B8A0A3FCDCC4C3F0000803F}
-        Material.FrontProperties.Specular.Color = {C7C6C63E00000000000000000000803F}
-        Position.Coordinates = {00000000000000000000C0C00000803F}
+      CubeSize = 4.000000000000000000
+      object GLSphere18: TGLSphere
+        Material.FrontProperties.Diffuse.Color = {F5F4743E0000803FCDCC4C3F0000803F}
+        Position.Coordinates = {0000000000008040000000000000803F}
+        Radius = 0.500000000000000000
+        EffectsData = {
+          0458434F4C02010202061254474C536F75726365504658456666656374020202
+          00120000000002000200060D5065726C696E4D616E6167657205000000000000
+          0080FF3F02060200080200080200080500000000000000000000050000000000
+          0000000000050000000000CDCCCCFB3F02000200090500000000000000000000
+          080200020002020200120000000002000200060D5370726974654D616E616765
+          72050000000000000080FF3F0206020008020008020008050000000000000000
+          00000500000000000000000000050000000000CDCCCCFB3F0200020009050000
+          0000000000000000080200}
+      end
+      object GLSphere17: TGLSphere
+        Material.FrontProperties.Diffuse.Color = {C5C4443EFAF9793FCDCC4C3F0000803F}
+        Position.Coordinates = {00000000000080C0000000000000803F}
         Radius = 0.500000000000000000
         EffectsData = {
           0458434F4C02010202061254474C536F75726365504658456666656374020202
@@ -179,7 +243,7 @@ object Form1: TForm1
       end
     end
     object GLDCubeProton3: TGLDummyCube
-      CubeSize = 1.000000000000000000
+      CubeSize = 4.000000000000000000
       object GLSphere14: TGLSphere
         Material.FrontProperties.Emission.Color = {9190103E00000000E0DF5F3F0000803F}
         Material.FrontProperties.Specular.Color = {00000000C1C0403FD5D4543F0000803F}
@@ -195,24 +259,9 @@ object Form1: TForm1
           00000500000000000000000000050000000000CDCCCCFB3F0200020009050000
           0000000000000000080200}
       end
-      object GLSphere13: TGLSphere
-        Material.FrontProperties.Emission.Color = {9190103E00000000E0DF5F3F0000803F}
-        Material.FrontProperties.Specular.Color = {000000008281013FD5D4543F0000803F}
-        Position.Coordinates = {000000000000A0C0000000000000803F}
-        Radius = 0.500000000000000000
-        EffectsData = {
-          0458434F4C02010202061254474C536F75726365504658456666656374020202
-          00120000000002000200060D5065726C696E4D616E6167657205000000000000
-          0080FF3F02060200080200080200080500000000000000000000050000000000
-          0000000000050000000000CDCCCCFB3F02000200090500000000000000000000
-          080200020002020200120000000002000200060D5370726974654D616E616765
-          72050000000000000080FF3F0206020008020008020008050000000000000000
-          00000500000000000000000000050000000000CDCCCCFB3F0200020009050000
-          0000000000000000080200}
-      end
     end
     object GLDCubeProton2: TGLDummyCube
-      CubeSize = 1.000000000000000000
+      CubeSize = 4.000000000000000000
       EdgeColor.Color = {EBE0E03EE4DB5B3F9A93133F0000803F}
       object GLSphere12: TGLSphere
         Material.FrontProperties.Emission.Color = {FDFC7C3E00000000E0DF5F3F0000803F}
@@ -246,7 +295,7 @@ object Form1: TForm1
       end
     end
     object GLDCubeProton1: TGLDummyCube
-      CubeSize = 1.000000000000000000
+      CubeSize = 4.000000000000000000
       object GLSphere1: TGLSphere
         Material.FrontProperties.Emission.Color = {FDFC7C3E00000000E0DF5F3F0000803F}
         Material.FrontProperties.Specular.Color = {C1C0C03DC1C0C03C000000000000803F}
@@ -281,16 +330,6 @@ object Form1: TForm1
     object GLParticleFXRenderer1: TGLParticleFXRenderer
       BlendingMode = bmTransparency
     end
-    object GLCamera1: TGLCamera
-      DepthOfView = 100.000000000000000000
-      FocalLength = 50.000000000000000000
-      TargetObject = Hent
-      Position.Coordinates = {000080400000C0400000C0400000803F}
-      object GLLightSource1: TGLLightSource
-        ConstAttenuation = 1.000000000000000000
-        SpotCutOff = 180.000000000000000000
-      end
-    end
   end
   object SpriteManager: TGLCustomSpritePFXManager
     Tag = 1
@@ -307,8 +346,8 @@ object Form1: TForm1
         LifeTime = 3.000000000000000000
         SizeScale = 1.000000000000000000
       end>
-    Left = 248
-    Top = 8
+    Left = 458
+    Top = 22
   end
   object SimpleNavigation: TGLSimpleNavigation
     Form = Owner
@@ -328,7 +367,7 @@ object Form1: TForm1
         ShiftState = [ssRight]
         Action = snaMoveAroundTarget
       end>
-    Left = 176
-    Top = 8
+    Left = 120
+    Top = 204
   end
 end

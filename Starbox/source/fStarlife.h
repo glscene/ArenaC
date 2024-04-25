@@ -33,7 +33,7 @@ class TFormLife : public TForm
   __published: // IDE-managed Components
     TGLScene* GLScene1;
     TGLSkyDome* GLSkyDome1;
-    TGLDummyCube* dcParsec;
+	TGLDummyCube *dcStarbox;
     TGLLensFlare* GLLensFlare1;
     TGLLightSource* GLLightSource1;
     TGLCamera* GLCamera1;
@@ -70,9 +70,7 @@ class TFormLife : public TForm
     TCheckBox* chbM;
     TLabel* Label2;
     TLabel* Label3;
-	TCheckBox *chbStop;
     void __fastcall FormCreate(TObject* Sender);
-    void __fastcall FormClose(TObject* Sender, TCloseAction &Action);
     void __fastcall GLCadencer1Progress(
         TObject* Sender, const double deltaTime, const double newTime);
     void __fastcall btnStartClick(TObject* Sender);
@@ -93,10 +91,8 @@ class TFormLife : public TForm
     void __fastcall ShapeMMouseDown(
         TObject* Sender, TMouseButton Button, TShiftState Shift, int X, int Y);
     void __fastcall chbOClick(TObject* Sender);
-	void __fastcall chbStopClick(TObject *Sender);
 	void __fastcall chbMClick(TObject *Sender);
   private: // User declarations
-    TGLAtmosphere* Atmosphere;
   public: // User declarations
     __fastcall TFormLife(TComponent* Owner);
     int time;

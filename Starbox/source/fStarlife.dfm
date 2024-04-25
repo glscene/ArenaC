@@ -1,141 +1,204 @@
 object FormLife: TFormLife
   Left = 0
   Top = 0
-  Caption = 'Random Stars with LifeTimes'
-  ClientHeight = 660
-  ClientWidth = 949
+  Margins.Left = 5
+  Margins.Top = 5
+  Margins.Right = 5
+  Margins.Bottom = 5
+  Caption = #1069#1082#1086#1083#1102#1094#1080#1103' '#1089#1082#1086#1087#1083#1077#1085#1080#1103' '#1079#1074#1105#1079#1076
+  ClientHeight = 1155
+  ClientWidth = 1675
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -19
   Font.Name = 'Tahoma'
   Font.Style = []
   Position = poScreenCenter
-  OnClose = FormClose
   OnCreate = FormCreate
-  TextHeight = 13
+  PixelsPerInch = 168
+  TextHeight = 23
   object GLSceneViewer1: TGLSceneViewer
     Left = 0
     Top = 0
-    Width = 747
-    Height = 660
+    Width = 1321
+    Height = 1155
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Camera = GLCamera1
     Buffer.BackgroundColor = clBlack
-    FieldOfView = 146.283203125000000000
+    FieldOfView = 160.352142333984400000
     PenAsTouch = False
     Align = alClient
     TabOrder = 0
   end
   object Panel1: TPanel
-    Left = 747
+    Left = 1321
     Top = 0
-    Width = 202
-    Height = 660
+    Width = 354
+    Height = 1155
+    Margins.Left = 5
+    Margins.Top = 5
+    Margins.Right = 5
+    Margins.Bottom = 5
     Align = alRight
     TabOrder = 1
     object Label1: TLabel
-      Left = 19
-      Top = 76
-      Width = 63
-      Height = 16
-      Caption = 'Time: m.y.'
+      Left = 33
+      Top = 133
+      Width = 125
+      Height = 28
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Caption = #1042#1088#1077#1084#1103': m.y.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object ShapeO: TShape
-      Left = 149
-      Top = 158
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 277
+      Width = 72
+      Height = 43
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clBlue
+      Pen.Width = 2
       OnMouseDown = ShapeOMouseDown
     end
     object ShapeB: TShape
-      Left = 149
-      Top = 185
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 324
+      Width = 72
+      Height = 44
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clSkyBlue
+      Pen.Width = 2
       OnMouseDown = ShapeBMouseDown
     end
     object ShapeA: TShape
-      Left = 149
-      Top = 212
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 371
+      Width = 72
+      Height = 44
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Pen.Width = 2
       OnMouseDown = ShapeAMouseDown
     end
     object ShapeF: TShape
-      Left = 149
-      Top = 239
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 418
+      Width = 72
+      Height = 44
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clMoneyGreen
+      Pen.Width = 2
       OnMouseDown = ShapeFMouseDown
     end
     object ShapeG: TShape
-      Left = 149
-      Top = 266
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 466
+      Width = 72
+      Height = 43
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clYellow
+      Pen.Width = 2
       OnMouseDown = ShapeGMouseDown
     end
     object ShapeK: TShape
-      Left = 149
-      Top = 293
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 513
+      Width = 72
+      Height = 44
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clFuchsia
+      Pen.Width = 2
       OnMouseDown = ShapeKMouseDown
     end
     object ShapeM: TShape
-      Left = 149
-      Top = 320
-      Width = 41
-      Height = 25
+      Left = 261
+      Top = 560
+      Width = 72
+      Height = 44
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Brush.Color = clRed
+      Pen.Width = 2
       OnMouseDown = ShapeMMouseDown
     end
     object Label2: TLabel
-      Left = 6
-      Top = 132
-      Width = 30
-      Height = 16
-      Caption = 'Class'
+      Left = 11
+      Top = 231
+      Width = 61
+      Height = 28
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Caption = #1050#1083#1072#1089#1089
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 70
-      Top = 132
-      Width = 12
-      Height = 16
+      Left = 123
+      Top = 231
+      Width = 22
+      Height = 28
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = '%'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
     end
     object btnStart: TButton
-      Left = 51
-      Top = 18
-      Width = 103
-      Height = 33
-      Caption = 'Start'
+      Left = 89
+      Top = 32
+      Width = 181
+      Height = 57
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Caption = #1057#1090#1072#1088#1090
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -143,44 +206,58 @@ object FormLife: TFormLife
       OnClick = btnStartClick
     end
     object chbSpeed10: TCheckBox
-      Left = 144
-      Top = 77
-      Width = 57
-      Height = 17
+      Left = 252
+      Top = 135
+      Width = 100
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'x 10 '
+      Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
+      State = cbChecked
       TabOrder = 1
       OnClick = chbSpeed10Click
     end
     object stColor: TStaticText
-      Left = 152
-      Top = 132
-      Width = 34
-      Height = 20
-      Caption = 'Color'
+      Left = 266
+      Top = 231
+      Width = 55
+      Height = 32
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
+      Caption = #1062#1074#1077#1090
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
     end
     object chbO: TCheckBox
-      Left = 16
-      Top = 164
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 287
+      Width = 184
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'O       0.1'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -189,15 +266,19 @@ object FormLife: TFormLife
       OnClick = chbOClick
     end
     object chbB: TCheckBox
-      Left = 16
-      Top = 191
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 334
+      Width = 169
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'B       0.4'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -205,15 +286,19 @@ object FormLife: TFormLife
       TabOrder = 4
     end
     object chbA: TCheckBox
-      Left = 16
-      Top = 218
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 382
+      Width = 184
+      Height = 29
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'A       0.5'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -221,15 +306,19 @@ object FormLife: TFormLife
       TabOrder = 5
     end
     object chbF: TCheckBox
-      Left = 16
-      Top = 245
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 429
+      Width = 184
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'F       3'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -237,15 +326,19 @@ object FormLife: TFormLife
       TabOrder = 6
     end
     object chbK: TCheckBox
-      Left = 16
-      Top = 302
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 529
+      Width = 184
+      Height = 29
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'K       12'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -253,15 +346,19 @@ object FormLife: TFormLife
       TabOrder = 7
     end
     object chbG: TCheckBox
-      Left = 16
-      Top = 273
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 478
+      Width = 184
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'G       8'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -269,15 +366,19 @@ object FormLife: TFormLife
       TabOrder = 8
     end
     object chbM: TCheckBox
-      Left = 16
-      Top = 329
-      Width = 105
-      Height = 17
+      Left = 28
+      Top = 576
+      Width = 184
+      Height = 30
+      Margins.Left = 5
+      Margins.Top = 5
+      Margins.Right = 5
+      Margins.Bottom = 5
       Caption = 'M       76'
       Checked = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -13
+      Font.Height = -23
       Font.Name = 'Tahoma'
       Font.Style = []
       ParentFont = False
@@ -285,19 +386,10 @@ object FormLife: TFormLife
       TabOrder = 9
       OnClick = chbMClick
     end
-    object chbStop: TCheckBox
-      Left = 56
-      Top = 384
-      Width = 97
-      Height = 17
-      Caption = 'Stop'
-      TabOrder = 10
-      OnClick = chbStopClick
-    end
   end
   object GLScene1: TGLScene
-    Left = 176
-    Top = 16
+    Left = 792
+    Top = 44
     object GLSkyDome1: TGLSkyDome
       Bands = <
         item
@@ -318,10 +410,14 @@ object FormLife: TFormLife
     object GLCamera1: TGLCamera
       DepthOfView = 10000000000.000000000000000000
       FocalLength = 100.000000000000000000
-      TargetObject = dcParsec
+      TargetObject = dcStarbox
       Position.Coordinates = {0080BB4400007A440080BB440000803F}
+      object GLLightSource1: TGLLightSource
+        ConstAttenuation = 1.000000000000000000
+        SpotCutOff = 180.000000000000000000
+      end
     end
-    object dcParsec: TGLDummyCube
+    object dcStarbox: TGLDummyCube
       CubeSize = 1000.000000000000000000
       VisibleAtRunTime = True
       object StarsO: TGLPoints
@@ -374,10 +470,6 @@ object FormLife: TFormLife
       Resolution = 10
       FlareIsNotOccluded = False
       Position.Coordinates = {000080C4000080C4000000000000803F}
-      object GLLightSource1: TGLLightSource
-        ConstAttenuation = 1.000000000000000000
-        SpotCutOff = 180.000000000000000000
-      end
     end
   end
   object GLCadencer1: TGLCadencer
@@ -389,7 +481,7 @@ object FormLife: TFormLife
   object GLSimpleNavigation1: TGLSimpleNavigation
     Form = Owner
     GLSceneViewer = GLSceneViewer1
-    FormCaption = 'Random Stars with Lifetimes - %FPS'
+    FormCaption = #1069#1082#1086#1083#1102#1094#1080#1103' '#1089#1082#1086#1087#1083#1077#1085#1080#1103' '#1079#1074#1105#1079#1076' - %FPS'
     KeyCombinations = <
       item
         ShiftState = [ssLeft, ssRight]
@@ -408,8 +500,8 @@ object FormLife: TFormLife
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 437
-    Top = 167
+    Left = 597
+    Top = 236
   end
   object ColorDialog1: TColorDialog
     Left = 218
